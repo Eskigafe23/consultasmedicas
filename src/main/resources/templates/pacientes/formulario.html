@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulario Paciente</title>
+</head>
+<body>
+    <h1>Paciente</h1>
+    <form th:action="@{/pacientes/guardar}" th:object="${paciente}" method="post">
+        <input type="hidden" th:field="*{id}"/>
+        <label>Nombre:</label><input type="text" th:field="*{nombre}"/><br/>
+        <label>DNI:</label><input type="text" th:field="*{dni}"/><br/>
+        <label>Teléfono:</label><input type="text" th:field="*{telefono}"/><br/>
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>
